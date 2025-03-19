@@ -1,9 +1,12 @@
+import './Dice.css';
 
 interface diceProps{
     side: number;
 }
 
 export function Dice({ side }: diceProps){
+    const questionMark: string = 'https://www.svgrepo.com/show/533734/question.svg';
+
     const sides: string[] = [
         'https://www.svgrepo.com/show/322173/dice-six-faces-one.svg',
         'https://www.svgrepo.com/show/322178/dice-six-faces-two.svg',
@@ -14,8 +17,11 @@ export function Dice({ side }: diceProps){
     ];
     
     return (
-        <>
-            <img src={ sides[side-1] } width={400} alt="Dado"/>
-        </>
+        <div className='dice__container'>
+            <img 
+                src={ side == 0 ? questionMark : sides[side-1] } 
+                width={150} 
+                alt="Dado"/>
+        </div>
     )
 }
