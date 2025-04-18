@@ -31,3 +31,21 @@ body {
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+    outline: none;
+    color: #ededed;
+    text-align: center;
+}
+
+select,
+option {
+    color: #171717;
+}
