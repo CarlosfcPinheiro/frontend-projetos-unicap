@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function Navbar() {
     return (
         <nav className="navbar">
-            <div className="nav__container">
-                <ul className="flex flex-row justify-center gap-4 border-2 w-[40%] rounded-md">
+            <div className="nav__container mt-8">
+                <ul className="flex flex-row justify-center gap-5 border-2 rounded-xl p-4">
                     <Link href="/" className="hover:underline">
                         Home
                     </Link>
