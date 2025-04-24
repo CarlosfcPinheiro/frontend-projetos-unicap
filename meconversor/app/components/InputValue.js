@@ -5,6 +5,7 @@ export default function InputValue({ onChangeInputValue }) {
                 type="number"
                 className="rect_input border-1 h-8"
                 onChange={onChangeInputValue}
+                placeholder="0"
             ></input>
         </div>
     );

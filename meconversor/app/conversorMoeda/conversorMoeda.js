@@ -8,12 +8,16 @@ import SelectorOutput from '../components/SelectorOutput';
 import { useState } from 'react';
 
 export default function Conversor({ options }) {
-    const [inputValue, setInputValue] = useState(1);
+    const [inputValue, setInputValue] = useState(0);
 
     const [selectInputValue, setSelectInputValue] = useState(options[0]);
-    const [selectOutputValue, setSelectOutputValue] = useState(options[0]);
+    const [selectOutputValue, setSelectOutputValue] = useState(options[1]);
 
     const outputValue = (() => {
+        if (inputValue === '' || isNaN(Number(inputValue))) {
+            return '';
+        }
+
         if (selectInputValue == 'Real' && selectOutputValue == 'Dólar') {
             return (inputValue / 5.28).toFixed(2);
         } else if (selectInputValue == 'Dólar' && selectOutputValue == 'Real') {
@@ -24,9 +28,6 @@ export default function Conversor({ options }) {
     })();
 
     function handleInputChange(e) {
-        if (!e.target.value) {
-            return;
-        }
         setInputValue(e.target.value);
     }
 

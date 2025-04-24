@@ -4,6 +4,7 @@ export default function OutputValue({ inputValue }) {
             <input
                 type="number"
                 className="rect_input border-1 h-8"
+                placeholder="0"
                 readOnly={true}
                 value={inputValue}
             ></input>

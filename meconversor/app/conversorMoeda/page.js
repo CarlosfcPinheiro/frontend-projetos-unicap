@@ -10,7 +10,7 @@ export default function ConversorMoeda() {
                 Esse é um conversor de moedas Real-Dólar. A cotação utilizada é
                 R$ 5.28 (14/04/2025).
             </p>
-            <Conversor options={['Real', 'Dólar']} />
+            <Conversor options={['Dólar', 'Real']} />
         </div>
     );
 }

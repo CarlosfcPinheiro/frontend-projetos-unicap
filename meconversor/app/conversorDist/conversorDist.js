@@ -8,12 +8,16 @@ import SelectorOutput from '../components/SelectorOutput';
 import { useState } from 'react';
 
 export default function Conversor({ options }) {
-    const [inputValue, setInputValue] = useState(1);
+    const [inputValue, setInputValue] = useState(0);
 
     const [selectInputValue, setSelectInputValue] = useState(options[0]);
-    const [selectOutputValue, setSelectOutputValue] = useState(options[0]);
+    const [selectOutputValue, setSelectOutputValue] = useState(options[1]);
 
     const outputValue = (() => {
+        if (inputValue === '' || isNaN(Number(inputValue))) {
+            return '';
+        }
+
         if (selectInputValue == 'Metro' && selectOutputValue == 'Pé') {
             return (inputValue * 3.281).toFixed(2);
         } else if (
@@ -36,14 +40,11 @@ export default function Conversor({ options }) {
         } else if (selectInputValue == 'Polegada' && selectOutputValue) {
             return (inputValue / 39.37).toFixed(2);
         } else {
-            return 1;
+            return inputValue;
         }
     })();
 
     function handleInputChange(e) {
-        if (!e.target.value) {
-            return;
-        }
         setInputValue(e.target.value);
     }
 

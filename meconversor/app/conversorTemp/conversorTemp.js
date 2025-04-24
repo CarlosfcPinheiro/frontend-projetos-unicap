@@ -11,9 +11,13 @@ export default function Conversor({ options }) {
     const [inputValue, setInputValue] = useState(0);
 
     const [selectInputValue, setSelectInputValue] = useState(options[0]);
-    const [selectOutputValue, setSelectOutputValue] = useState(options[0]);
+    const [selectOutputValue, setSelectOutputValue] = useState(options[1]);
 
     const outputValue = (() => {
+        if (inputValue === '' || isNaN(Number(inputValue))) {
+            return '';
+        }
+
         if (
             selectInputValue == 'Celsius' &&
             selectOutputValue == 'Fahrenheit'
@@ -30,9 +34,6 @@ export default function Conversor({ options }) {
     })();
 
     function handleInputChange(e) {
-        if (!e.target.value) {
-            setInputValue(0);
-        }
         setInputValue(e.target.value);
     }
 
