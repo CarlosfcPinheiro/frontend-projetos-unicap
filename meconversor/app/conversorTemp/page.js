@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Conversor from './conversorTemp';
 
-export default function ConversorTemperatura() {
+export default function pageTemperatura() {
     return (
         <div className="temperatura__container w-[100%] h-[100vh] flex flex-col items-center gap-5">
             <Navbar />

@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Conversor from './conversorMoeda';
 
-export default function ConversorMoeda() {
+export default function pageMoeda() {
     return (
         <div className="moeda__container w-[100%] h-[100vh] flex flex-col items-center gap-5">
             <Navbar />
@@ -10,7 +10,7 @@ export default function ConversorMoeda() {
                 Esse é um conversor de moedas Real-Dólar. A cotação utilizada é
                 R$ 5.28 (14/04/2025).
             </p>
-            <Conversor options={['Dólar', 'Real']} />
+            <Conversor options={['Real', 'Dólar']} />
         </div>
     );
 }

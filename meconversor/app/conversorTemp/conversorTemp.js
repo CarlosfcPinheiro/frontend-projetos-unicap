@@ -11,7 +11,7 @@ export default function Conversor({ options }) {
     const [inputValue, setInputValue] = useState(0);
 
     const [selectInputValue, setSelectInputValue] = useState(options[0]);
-    const [selectOutputValue, setSelectOutputValue] = useState(options[1]);
+    const [selectOutputValue, setSelectOutputValue] = useState(options[0]);
 
     const outputValue = (() => {
         if (inputValue === '' || isNaN(Number(inputValue))) {

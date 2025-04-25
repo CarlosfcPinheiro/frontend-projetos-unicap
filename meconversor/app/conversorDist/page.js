@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Conversor from './conversorDist';
 
-export default function ConversorDist() {
+export default function pageDist() {
     return (
         <div className="distancia__container w-[100%] h-[100vh] flex flex-col items-center gap-5">
             <Navbar />
