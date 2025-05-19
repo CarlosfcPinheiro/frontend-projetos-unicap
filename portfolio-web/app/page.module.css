@@ -1,0 +1,57 @@
+:root {
+    --hidden_color: #ededed50;
+    --toled_border: #1f1f1f;
+    --secondary_text: #a7a7a7;
+}
+
+@layer utilities {
+    .hidden_text:hover {
+        color: var(--hidden_color);
+        cursor: default;
+    }
+
+    .hidden_text {
+        color: transparent;
+        position: absolute;
+    }
+
+    .tiled_window__container {
+        border: 0.05rem solid var(--toled_border);
+        border-radius: 0.5rem;
+    }
+
+    .tiled_window__container > img {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+
+        opacity: 0.9;
+    }
+
+    .top_window_bar__container {
+        height: 3rem;
+        width: 100%;
+        background-color: var(--toled_border);
+
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .purple_colored {
+        color: var(--purple_3);
+        font-weight: bolder;
+    }
+
+    .important_text {
+        color: var(--primary_text);
+    }
+
+    .secondary_text {
+        color: var(--secondary_text);
+    }
+}
