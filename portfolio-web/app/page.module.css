@@ -47,11 +47,29 @@
         font-weight: bolder;
     }
 
+    .yellow_colored {
+        color: var(--yellow);
+        font-weight: bolder;
+    }
+
     .important_text {
         color: var(--primary_text);
     }
 
     .secondary_text {
         color: var(--secondary_text);
+    }
+
+    .text_gradient {
+        font-weight: bold;
+        font-size: 3rem;
+
+        background-image: linear-gradient(
+            45deg,
+            var(--purple_3),
+            var(--primary_text)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
