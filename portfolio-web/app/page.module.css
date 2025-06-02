@@ -1,9 +1,3 @@
-:root {
-    --hidden_color: #ededed50;
-    --toled_border: #1f1f1f;
-    --secondary_text: #a7a7a7;
-}
-
 @layer utilities {
     .hidden_text:hover {
         color: var(--hidden_color);
@@ -16,7 +10,7 @@
     }
 
     .tiled_window__container {
-        border: 0.05rem solid var(--toled_border);
+        border: 0.05rem solid var(--tiled_border);
         border-radius: 0.5rem;
     }
 
@@ -30,7 +24,7 @@
     .top_window_bar__container {
         height: 5.5vh;
         width: 100%;
-        background-color: var(--toled_border);
+        background-color: var(--tiled_border);
 
         border-top-left-radius: 0.5rem;
         border-top-right-radius: 0.5rem;
