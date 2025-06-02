@@ -16,7 +16,7 @@ export default function Profissional() {
             <main>
                 <PlayButton />
                 <section className="w-full h-[80vh] flex justify-center">
-                    <div className="content__container w-[60%] h-auto pt-20 pb-10 flex flex-col gap-4">
+                    <div className="content__container w-[50%] h-auto pt-20 pb-10 flex flex-col gap-4">
                         <h1 className={stylesModule.text_gradient}>
                             # Profissional. Carreira.
                         </h1>
@@ -43,6 +43,7 @@ export default function Profissional() {
                                                 'https://www.avanade.com/pt-br'
                                             }
                                             className="underline"
+                                            target="blank"
                                         >
                                             Avanade Brasil
                                         </Link>

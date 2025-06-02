@@ -28,7 +28,7 @@
     }
 
     .top_window_bar__container {
-        height: 3rem;
+        height: 5.5vh;
         width: 100%;
         background-color: var(--toled_border);
 
@@ -67,7 +67,7 @@
         background-image: linear-gradient(
             45deg,
             var(--purple_3),
-            var(--primary_text)
+            var(--primary_text) 80%
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

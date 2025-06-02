@@ -15,8 +15,9 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
+        --background-highlighted: #161616;
         --primary_text: #f8f8f8;
-        --secondary_text: #c9c9c9;
+        --secondary_text: #a7a7a7;
 
         --purple_1: #24243e;
         --purple_2: #424672;
@@ -24,16 +25,29 @@
         --red: #b39095;
         --yellow: #dbbf9b;
         --white: #e3ded8;
+
+        --green-mac: #00ca4c;
+        --yellow-mac: #ffbd44;
+        --red-mac: #ff605c;
+
+        --footer-text: #ededed80;
+        --hidden_color: #ededed50;
     }
 }
 
+html,
 body {
     background: var(--background);
     color: var(--primary_text);
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::selection {
     background-color: var(--yellow);
     color: var(--background);
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
 }
